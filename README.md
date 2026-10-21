@@ -5,6 +5,10 @@
 [![React](https://img.shields.io/badge/React-Vite-61dafb?style=for-the-badge&logo=react)](https://react.dev/)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow?style=for-the-badge)](https://opensource.org/licenses/ISC)
 
+### 🚀 1-Click Cloud Deployment
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Abhinav-eng1/Inventory-and-Order-Management-System)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAbhinav-eng1%2FInventory-and-Order-Management-System&root-directory=frontend&env=VITE_API_URL)
+
 A production-ready, beginner-friendly full-stack **Inventory and Order Management System** built with MongoDB, Express.js, React (Vite), and Node.js. Features strict Role-Based Access Control (Admin & Staff), automated two-way inventory synchronization, PDF-printable order invoices, CSV data exports, and real-time operational analytics.
 
 ---
