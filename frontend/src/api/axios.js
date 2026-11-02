@@ -8,9 +8,23 @@
 
 import axios from 'axios';
 
-// Create Axios instance with base URL (defaults to /api which is proxied by Vite in dev)
+/**
+ * Normalizes the backend API base URL:
+ * - If VITE_API_URL is provided, ensures trailing slashes are trimmed and appends '/api' if not already present.
+ * - If not provided, falls back to '/api' (for local Vite dev proxy and Vercel serverless rewrites).
+ */
+const getBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (!envUrl || !envUrl.trim()) {
+    return '/api';
+  }
+  const cleanUrl = envUrl.trim().replace(/\/+$/, '');
+  return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+};
+
+// Create Axios instance with normalized base URL
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: getBaseUrl(),
   headers: {
     'Content-Type': 'application/json'
   }
